@@ -180,7 +180,7 @@ if (MSVC)
   configure_file(extract_includes.bat.in extract_includes.bat)
 
   # Suppress linker warnings about files with no symbols defined.
-  set(CMAKE_STATIC_LINKER_FLAGS /ignore:4221)
+  string(APPEND CMAKE_STATIC_LINKER_FLAGS " /ignore:4221")
 
   # Configure Resource Compiler
   enable_language(RC)
